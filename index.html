@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Set the background image */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/dark-hand-painted-red-watercolour-background-design_1048-20385.png?v=1745832430652"); /* Replace with your image path */
+        background-size: cover; /* Ensures the image stretches to cover the entire window */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+        height: 100vh; /* Makes the body take up full height of the viewport */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Content goes here -->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Tiling Left to Right</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/dark-hand-painted-red-watercolour-background-design_1048-20385.png?v=1745832430652");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+      .gif-strip {
+        position: absolute;
+        top: -90px; /* Distance from the top */
+        left: 0;
+        width: 100%;
+        height: 200px; /* Height of the GIF */
+        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/fsgfsgsgfsfgs-unscreen.gif?v=1745836393325");
+        background-repeat: repeat-x; /* Repeat horizontally */
+        background-size: auto 100%; /* Keep gif original width, fit height */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gif-strip"></div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clickable Image with Sound & Position</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        position: relative; /* important for absolute positioning inside */
+      }
+
+      .container {
+        position: absolute;
+        top: 50px; /* adjust this */
+        left: 100px; /* adjust this */
+        /* You can use bottom/right instead if you want too */
+        text-align: center;
+      }
+
+      img {
+        width: 200px;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 10px;
+        animation: slowShake 3s infinite ease-in-out;
+        position: relative;
+      }
+
+      @keyframes slowShake {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(-5px, 5px);
+        }
+        50% {
+          transform: translate(5px, -5px);
+        }
+        75% {
+          transform: translate(-5px, -5px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      img:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="https://about-robloxianvideohd.glitch.me" id="clickable-image">
+        <img
+          id="image"
+          src="https://cdn.glitch.global/c91ba31a-037b-49eb-b3a8-2fa38dc15b87/scaryimage1?v=1745760961027"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <audio
+      id="click-sound"
+      src="https://cdn.glitch.global/c91ba31a-037b-49eb-b3a8-2fa38dc15b87/record-online-voice-recorder_HqC42pP.mp3?v=1745836560956"
+    ></audio>
+
+    <script>
+      const clickableImage = document.getElementById("clickable-image");
+      const imageElement = document.getElementById("image");
+      const clickSound = document.getElementById("click-sound");
+
+      clickableImage.addEventListener("click", function (event) {
+        event.preventDefault(); // stop instant redirect!
+
+        clickSound.play(); // Play sound
+
+        setTimeout(() => {
+          imageElement.src = "";
+        }, 0.3); // Change image after 0.5s
+
+        setTimeout(() => {
+          window.location.href = clickableImage.href; // Redirect after 2s
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stretch Background</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+  <script src="script.js"></script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- Audio element for background music -->
+    <audio autoplay loop>
+      <source
+        src="https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/Free%20Horror%20Ambience%20(Dark%20Project).mp3?v=1745857672639"
+        type="audio/mp3"
+      />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretch Background</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1></h1>
+</body>
+<script src="script.js"></script>
+</html>
