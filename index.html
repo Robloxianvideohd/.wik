@@ -13,7 +13,7 @@
 
         body {
             background-color: hidden; /* Dark background for the page */
-            height: 100vh; /* Full viewport height */
+            height: 663vh; /* Full viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,7 +25,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 3vw; /* Adjust the width of the bars */
+            width: 13vw; /* Adjust the width of the bars */
             background-image: url('https://smlwiki.com/sides3.png'); /* Replace with the image URL */
             background-size: cover; /* Make the image cover the entire bar */
             background-position: center; /* Center the image inside the bar */
@@ -201,8 +201,8 @@
 
       .container {
         position: absolute;
-        top: 100px; /* adjust this */
-        left: 125px; /* adjust this */
+        top: 110px; /* adjust this */
+        left: 275px; /* adjust this */
         /* You can use bottom/right instead if you want too */
         text-align: center;
         z-index: 3;
@@ -311,10 +311,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Spooky Box</title>
     <style>
         body {
-            background-color: ; /* Dark background for a spooky effect */
+            background-color: ; /* Dark spooky background */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -324,44 +324,37 @@
         }
 
         .scary-box {
-            width: 1600px;
+            width: 1340px;
             height: 800px;
-            background-color: ;
-            border-radius: 0px;
-            box-shadow: ;
+            background-color: #200; /* Inner spooky box color */
+            border: 4px ; /* Red outline */
+            box-shadow: 0 0 0px red; /* Spooky glow */
             position: relative;
             overflow: hidden;
-            display: background;
+            display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .scary-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 1; /* Makes the image darker for scarier effect */
-            z-index: 2;
+            color: red;
         }
 
         .scary-box::before {
             content: "";
-            font-size: 36px;
-            color: ;
+            font-size: 48px;
+            color: Black;
             font-weight: bold;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 0.8);
+            text-shadow: 0 0 10px red, 0 0 20px darkred;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 2;
         }
     </style>
 </head>
 <body>
 
 <div class="scary-box">
-    <!-- You can replace the src with any image URL -->
-    <img src="https://static4.depositphotos.com/1001951/509/i/450/depositphotos_5097990-stock-illustration-abstract-grunge-background.jpg" alt="Scary Image">
+    <!-- No image here anymore UwU -->
 </div>
 
 </body>
