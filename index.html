@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Dark Red Bars</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: hidden; /* Dark background for the page */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Left and right bars with image background */
+        .side-bar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3vw; /* Adjust the width of the bars */
+            background-image: url('https://static4.depositphotos.com/1001951/509/i/450/depositphotos_5097990-stock-illustration-abstract-grunge-background.jpg'); /* Replace with the image URL */
+            background-size: cover; /* Make the image cover the entire bar */
+            background-position: center; /* Center the image inside the bar */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Shadow effect */
+        }
+
+        .left-bar {
+            left: 0;
+        }
+
+        .right-bar {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="side-bar left-bar"></div>
+    <div class="side-bar right-bar"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Load</title>
