@@ -74,14 +74,14 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: auto;
+      height: auto;
       background-color: black;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      z-index: 4;
+      z-index: 2;
     }
 
     .marquee-container {
@@ -135,32 +135,10 @@
       </div>
     </div>
   </div>
-
-  <script>
-    // Wait until the entire page is loaded (including images, scripts, etc.)
-    window.onload = () => {
-      // Once the page is fully loaded, hide the loading screen
-      document.getElementById('loading-screen').style.display = 'none';
-      // Show the main content of the page
-      document.getElementById('main-content').style.display = 'block';
-    };
-  </script>
 </body>
 </html>
-
-
-  <script>
-    // Simulate loading complete after 3 seconds
-    window.onload = () => {
-      setTimeout(() => {
-        document.getElementById('loading-screen').style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-      }, 3000); // Adjust the time as needed
-    };
-  </script>
 </body>
 </html>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -326,7 +304,7 @@
 
 .scary-box {
     width: 3000px;
-    height: 800px;
+    height: 550px;
     background-color: #200; /* Inner spooky box color */
     border: 4px solid #511; /* Outer outline */
     box-shadow:
