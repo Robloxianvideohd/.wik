@@ -23,59 +23,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Endless Scrolling Text</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: hidden;
-      overflow: hidden;
-    }
-
-    .marquee-container {
-      position: absolute;
-      top: 50px; /* Change this to move it vertically */
-      left: 0;
-      width: 100%;
-      background-color: black;
-      white-space: nowrap;
-      overflow: hidden;
-      height: 35px; /* Adjust height based on font-size */
-    }
-
-    .marquee-content {
-      display: inline-block;
-      animation: scroll-loop 15s linear infinite;
-      font-size: 20px;
-      color: darkred;
-      text-shadow: 0 0 2px red, 0 0 5px red;
-      border: 1px solid red;
-      padding: 5px 0;
-    }
-
-    @keyframes scroll-loop {
-      0% {
-        transform: translateX(-50%);
-      }
-      100% {
-        transform: translateX(0%);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="marquee-container">
-    <div class="marquee-content">
-      You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here  You're not meant to be here 
-    </div>
-  </div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
