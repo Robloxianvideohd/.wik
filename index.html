@@ -28,26 +28,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Endless Scrolling Text</title>
   <style>
-    body {
+    * {
       margin: 0;
-      background-color: hidden;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       overflow: hidden;
+    }
+
+    /* Loader styles */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      color: red;
+      font-size: 24px;
+      font-family: monospace;
+      text-shadow: 0 0 5px red;
     }
 
     .marquee-container {
       position: absolute;
-      top: 0px; /* Change this to move it vertically */
+      top: 0px;
       left: 0;
       width: 100%;
       background-color: black;
       white-space: nowrap;
       overflow: hidden;
-      height: 35px; /* Adjust height based on font-size */
+      height: 35px;
     }
 
     .marquee-content {
       display: flex;
-      width: 200%; /* This makes room for both text elements */
+      width: 200%;
     }
 
     .marquee-inner {
@@ -56,8 +78,8 @@
       font-size: 20px;
       color: darkred;
       text-shadow: 0 0 2px red, 0 0 5px red;
-      border-top: 1px solid red; /* Border only on top */
-      border-bottom: 1px solid red; /* Border only on bottom */
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
       padding: 5px 0;
     }
 
@@ -66,25 +88,35 @@
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
       }
     }
   </style>
 </head>
 <body>
+  <!-- Loading screen -->
+  <div id="loader">Loading... please wait</div>
+
+  <!-- Marquee -->
   <div class="marquee-container">
     <div class="marquee-content">
       <div class="marquee-inner">
-        You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
+        You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
       </div>
       <div class="marquee-inner">
-        
+        You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
       </div>
     </div>
   </div>
+
+  <script>
+    window.onload = function() {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    };
+  </script>
 </body>
 </html>
-
 
 <!DOCTYPE html>
 <html lang="en">
