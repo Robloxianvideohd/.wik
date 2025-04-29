@@ -1,60 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scary Dark Red Bars</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: hidden; /* Dark background for the page */
-            height: 663vh; /* Full viewport height */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        /* Left and right bars with image background */
-        .side-bar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 13vw; /* Adjust the width of the bars */
-            height: auto;
-            background-image: url('https://cdn.discordapp.com/attachments/1364500477370437686/1366857384643002551/image.png?ex=681278a3&is=68112723&hm=c133416e7b2b786f8c8f338283db8939eee759f23bf2b9d24869e113aa77a1ea&'); /* Replace with the image URL */
-            background-size: cover; /* Make the image cover the entire bar */
-            background-position: center; /* Center the image inside the bar */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Shadow effect */
-            z-index: 5
-        }
-
-        .left-bar {
-            left: 0;
-        }
-
-        .right-bar {
-            right: 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="side-bar left-bar"></div>
-    <div class="side-bar right-bar"></div>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Load</title>
+  <title>Top & Bottom Endless Marquee</title>
   <style>
     * {
       margin: 0;
@@ -63,10 +12,35 @@
     }
 
     body {
-      overflow: hidden;
-      background: black;
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
       color: white;
-      font-family: monospace;
+      overflow: hidden;
+    }
+
+    /* SIDE BARS */
+    .side-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 13vw;
+      background-image: url('https://cdn.discordapp.com/attachments/1364500477370437686/1366857384643002551/image.png?ex=681278a3&is=68112723&hm=c133416e7b2b786f8c8f338283db8939eee759f23bf2b9d24869e113aa77a1ea');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      z-index: 5;
+    }
+
+    .left-bar {
+      left: 0;
+    }
+
+    .right-bar {
+      right: 0;
     }
 
     /* LOADING SCREEN */
@@ -74,34 +48,50 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
       background-color: black;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      z-index: 2;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 2s ease-out;
     }
 
-    .marquee-container {
+    /* COMMON MARQUEE STYLES */
+    .marquee-container,
+    .marquee-bottom {
+      position: fixed;
       width: 100%;
-      background-color: hidden;
+      background-color: black;
       white-space: nowrap;
       overflow: hidden;
       height: 35px;
       border-top: 1px solid red;
       border-bottom: 1px solid red;
+      z-index: 10000;
     }
 
-    .marquee-content {
+    .marquee-container {
+      top: 0;
+    }
+
+    .marquee-bottom {
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+
+    .marquee-content,
+    .marquee-bottom-content {
       display: flex;
       width: 200%;
     }
 
-    .marquee-inner {
+    .marquee-inner,
+    .marquee-bottom-inner {
       display: inline-block;
-      animation: scroll-loop 130s linear infinite;
+      animation: scroll-loop 110s linear infinite;
       font-size: 20px;
       color: darkred;
       text-shadow: 0 0 2px red, 0 0 5px red;
@@ -116,52 +106,57 @@
         transform: translateX(-100%);
       }
     }
-
-    /* Hide the main content initially */
-    #main-content {
-      display: none;
-    }
   </style>
 </head>
 <body>
-
-  <!-- Loading Screen with Creepy Marquee -->
+  <!-- Loading Screen -->
   <div id="loading-screen">
-    <div class="marquee-container">
-      <div class="marquee-content">
-        <div class="marquee-inner">
-          You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
-        </div>
+    <p style="color: white; font-size: 30px;">2025-04-03</p>
+  </div>
+
+  <!-- Top Marquee -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-inner">
+You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
+
       </div>
     </div>
   </div>
-</body>
-</html>
+
+  <!-- Bottom Marquee (Upside Down but Same as Top) -->
+  <div class="marquee-bottom">
+    <div class="marquee-bottom-content">
+      <div class="marquee-bottom-inner">
+You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Bars -->
+  <div class="side-bar left-bar"></div>
+  <div class="side-bar right-bar"></div>
+
+  <script>
+    window.addEventListener('load', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      setTimeout(function () {
+        loadingScreen.style.opacity = 0;
+        loadingScreen.style.pointerEvents = 'none';
+        setTimeout(function () {
+          loadingScreen.style.display = 'none';
+        }, 2000);
+      }, 500);
+    });
+  </script>
 </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      /* Set the background image */
-      body {
-        margin: 0;
-        padding: 0;
-        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/dark-hand-painted-red-watercolour-background-design_1048-20385.png?v=1745832430652"); /* Replace with your image path */
-        background-size: cover; /* Ensures the image stretches to cover the entire window */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-        height: 100vh; /* Makes the body take up full height of the viewport */
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Content goes here -->
-  </body>
-</html>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -200,6 +195,7 @@
       }
     </style>
   </head>
+  
   <body>
     <div class="container">
       <a href="https://robloxianvideohd.github.io/About/" id="clickable-image">
