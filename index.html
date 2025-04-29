@@ -324,19 +324,22 @@
             font-family: 'Arial', sans-serif;
         }
 
-        .scary-box {
-            width: 3000px;
-            height: 800px;
-            background-color: #200; /* Inner spooky box color */
-            border: 4px solid #511;
-            box-shadow: 0 0 0px red; /* Spooky glow */
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: red;
-        }
+.scary-box {
+    width: 3000px;
+    height: 800px;
+    background-color: #200; /* Inner spooky box color */
+    border: 4px solid #511; /* Outer outline */
+    box-shadow:
+        0 0 40px #511,        /* Outer spooky glow */
+        inset 0 0 10px black; /* Inner black outline */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
 
         .scary-box::before {
             content: "";
