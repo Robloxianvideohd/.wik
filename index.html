@@ -1,3 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Endless Scrolling Text</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 9999;
+    }
+
+    .marquee-container {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 35px;
+    }
+
+    .marquee-content {
+      display: flex;
+      width: 200%;
+    }
+
+    .marquee-inner {
+      display: inline-block;
+      animation: scroll-loop 15s linear infinite;
+      font-size: 20px;
+      color: darkred;
+      text-shadow: 0 0 2px red, 0 0 5px red;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+      padding: 5px 0;
+    }
+
+    @keyframes scroll-loop {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <div class="marquee-inner">
+          You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
+        </div>
+        <div class="marquee-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,106 +92,6 @@
   <body>
     <!-- Content goes here -->
   </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spooky Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      overflow: hidden;
-      background: black;
-      color: white;
-      font-family: monospace;
-    }
-
-    /* LOADING SCREEN */
-    #loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .marquee-container {
-      width: 100%;
-      background-color: black;
-      white-space: nowrap;
-      overflow: hidden;
-      height: 35px;
-      border-top: 1px solid red;
-      border-bottom: 1px solid red;
-    }
-
-    .marquee-content {
-      display: flex;
-      width: 200%;
-    }
-
-    .marquee-inner {
-      display: inline-block;
-      animation: scroll-loop 15s linear infinite;
-      font-size: 20px;
-      color: darkred;
-      text-shadow: 0 0 2px red, 0 0 5px red;
-      padding: 5px 0;
-    }
-
-    @keyframes scroll-loop {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    /* MAIN PAGE CONTENT (hidden initially) */
-    #main-content {
-      display: none;
-      padding: 2rem;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Loading Screen with Creepy Marquee -->
-  <div id="loading-screen">
-    <div class="marquee-container">
-      <div class="marquee-content">
-        <div class="marquee-inner">
-          You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
-        </div>
-        <div class="marquee-inner">
-          You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here You're not meant to be here 
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    window.onload = function() {
-      const loader = document.getElementById('loader');
-      loader.style.display = 'none';
-    };
-  </script>
-</body>
 </html>
 
 <!DOCTYPE html>
