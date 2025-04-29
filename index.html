@@ -12,8 +12,8 @@
         }
 
         body {
-            background-color: hidden;
-            height: 100vh;
+            background-color: hidden; /* Dark background for the page */
+            height: 100vh; /* Full viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,95 +21,31 @@
         }
 
         /* Left and right bars with image background */
-        .side-bar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 3vw;
-            background-image: url('https://static4.depositphotos.com/1001951/509/i/450/depositphotos_5097990-stock-illustration-abstract-grunge-background.jpg');
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-        }
+.side-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3vw;
+  background-image: url('https://static4.depositphotos.com/1001951/509/i/450/depositphotos_5097990-stock-illustration-abstract-grunge-background.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  z-index: 10; /* Change this to 10 or higher */
+}
+
 
         .left-bar {
             left: 0;
-            z-index: 4;
         }
 
         .right-bar {
             right: 0;
-            z-index: 4;
-        }
-
-        .scary-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.9;
-        }
-
-        /* Clickable image */
-        .container {
-            position: absolute;
-            top: 75px;
-            left: 200px;
-            text-align: center;
-            z-index: 2;
-        }
-
-        img {
-            width: 200px;
-            cursor: pointer;
-            border: 0;
-            border-radius: 0;
-            position: relative;
-        }
-
-        img:hover {
-            opacity: 0.8;
-        }
-
-        /* Audio element for sound */
-        audio {
-            display: none;
         }
     </style>
 </head>
 <body>
     <div class="side-bar left-bar"></div>
     <div class="side-bar right-bar"></div>
-
-    <div class="scary-box">
-        <img src="https://static4.depositphotos.com/1001951/509/i/450/depositphotos_5097990-stock-illustration-abstract-grunge-background.jpg" alt="Scary Image">
-    </div>
-
-    <div class="container">
-        <a href="https://about-robloxianvideohd.glitch.me" id="clickable-image">
-            <img id="image" src="https://cdn.glitch.global/c91ba31a-037b-49eb-b3a8-2fa38dc15b87/scaryimage1?v=1745760961027" alt="">
-        </a>
-    </div>
-
-    <audio id="click-sound" src="https://cdn.glitch.global/c91ba31a-037b-49eb-b3a8-2fa38dc15b87/record-online-voice-recorder_HqC42pP.mp3?v=1745836560956"></audio>
-
-    <script>
-        const clickableImage = document.getElementById("clickable-image");
-        const imageElement = document.getElementById("image");
-        const clickSound = document.getElementById("click-sound");
-
-        clickableImage.addEventListener("click", function (event) {
-            event.preventDefault();
-            clickSound.play();
-
-            setTimeout(() => {
-                imageElement.src = "";
-            }, 300); // Change image after 0.3s
-
-            setTimeout(() => {
-                window.location.href = clickableImage.href; // Redirect after 50ms
-            }, 50);
-        });
-    </script>
 </body>
 </html>
 
@@ -145,6 +81,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      z-index: 6;
     }
 
     .marquee-container {
@@ -277,6 +214,7 @@
         border: 0px solid black;
         border-radius: 0px;
         position: relative;
+        z-index: 2
       }
 
       img:hover {
