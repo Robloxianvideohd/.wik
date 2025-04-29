@@ -30,6 +30,7 @@
             background-size: cover; /* Make the image cover the entire bar */
             background-position: center; /* Center the image inside the bar */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Shadow effect */
+            z-index: 6
         }
 
         .left-bar {
@@ -79,7 +80,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      z-index: 9999;
+      z-index: 6;
     }
 
     .marquee-container {
@@ -210,9 +211,9 @@
         width: 200px;
         cursor: pointer;
         border: 0px solid black;
-        border-radius: 10px;
-        animation: slowShake 3s infinite ease-in-out;
+        border-radius: 0px;
         position: relative;
+        z-index: 2
       }
 
       img:hover {
@@ -252,7 +253,7 @@
 
         setTimeout(() => {
           window.location.href = clickableImage.href; // Redirect after 2s
-        }, 100);
+        }, 50);
       });
     </script>
   </body>
