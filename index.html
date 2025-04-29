@@ -26,6 +26,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Tiling Left to Right</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/dark-hand-painted-red-watercolour-background-design_1048-20385.png?v=1745832430652");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+      .gif-strip {
+        position: absolute;
+        top: -90px; /* Distance from the top */
+        left: 0;
+        width: 100%;
+        height: 200px; /* Height of the GIF */
+        background-image: url("https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/fsgfsgsgfsfgs-unscreen.gif?v=1745836393325");
+        background-repeat: repeat-x; /* Repeat horizontally */
+        background-size: auto 100%; /* Keep gif original width, fit height */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gif-strip"></div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clickable Image with Sound & Position</title>
     <style>
       body {
@@ -78,7 +113,7 @@
   </head>
   <body>
     <div class="container">
-      <a href="https://robloxianvideohd.github.io/About/" id="clickable-image">
+      <a href="https://about-robloxianvideohd.glitch.me" id="clickable-image">
         <img
           id="image"
           src="https://cdn.glitch.global/c91ba31a-037b-49eb-b3a8-2fa38dc15b87/scaryimage1?v=1745760961027"
@@ -119,7 +154,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Stretch Background</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -152,7 +187,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Stretch Background</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -160,4 +195,3 @@
 </body>
 <script src="script.js"></script>
 </html>
-
