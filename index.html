@@ -13,7 +13,7 @@
 
     body {
       overflow: hidden;
-      background: hidden;
+      background: black;
       color: white;
       font-family: monospace;
     }
@@ -66,7 +66,7 @@
       }
     }
 
-    /* Hide the loading screen content when it should disappear */
+    /* Hide the main content initially */
     #main-content {
       display: none;
     }
@@ -87,6 +87,25 @@
       </div>
     </div>
   </div>
+
+  <!-- Main Page Content (Hidden Initially) -->
+  <div id="main-content">
+    <h1>Welcome to the actual page 👻</h1>
+    <p>This is where your spooky stuff begins...</p>
+  </div>
+
+  <script>
+    // Wait until the entire page is loaded (including images, scripts, etc.)
+    window.onload = () => {
+      // Once the page is fully loaded, hide the loading screen
+      document.getElementById('loading-screen').style.display = 'none';
+      // Show the main content of the page
+      document.getElementById('main-content').style.display = 'block';
+    };
+  </script>
+</body>
+</html>
+
 
   <script>
     // Simulate loading complete after 3 seconds
