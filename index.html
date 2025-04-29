@@ -195,3 +195,59 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moving Red Text</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      top: 50px; /* Change this to move vertically */
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      pointer-events: none; /* optional, prevents clicks */
+    }
+
+    .moving-text {
+      display: inline-block;
+      white-space: nowrap;
+      color: darkred;
+      font-size: 36px;
+      font-family: Arial, sans-serif;
+      text-shadow: 
+        0 0 2px red,
+        0 0 5px red;
+      padding: 10px;
+      background-color: black;
+      border: 2px solid red;
+      animation: scroll-left 10s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text-wrapper">
+    <div class="moving-text">
+      YOUR TEXT HERE ♥ YOUR TEXT HERE ♥ YOUR TEXT HERE ♥
+    </div>
+  </div>
+</body>
+</html>
