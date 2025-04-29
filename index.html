@@ -34,20 +34,21 @@
 
         .left-bar {
             left: 0;
-            z-index: 1;
+            z-index: 4; /* Added z-index */
         }
 
         .right-bar {
             right: 0;
-            z-index: 1;
+            z-index: 4; /* Added z-index */
         }
 
-        /* Scary Box with Background Image */
+        /* Scary Box */
         .scary-box {
             width: 1600px;
             height: 800px;
             position: relative;
             overflow: hidden;
+            z-index: 3; /* Added z-index */
         }
 
         .scary-box img {
@@ -67,15 +68,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
+            z-index: 2; /* Added z-index */
         }
 
-        /* Clickable image and its container */
+        /* Clickable image */
         .container {
             position: absolute;
             top: 75px;
             left: 200px;
             text-align: center;
+            z-index: 2; /* Added z-index */
         }
 
         img {
