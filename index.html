@@ -262,21 +262,29 @@ You're not meant to be here You're not meant to be here You're not meant to be h
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-  </head>
-  <body>
-    <!-- Audio element for background music -->
-    <audio autoplay loop>
-      <source
-        src="https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/Free%20Horror%20Ambience%20(Dark%20Project).mp3?v=1745857672639"
-        type="audio/mp3"
-      />
-      Your browser does not support the audio element.
-    </audio>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horror Ambience</title>
+</head>
+<body>
+  <!-- Audio element for background music -->
+  <audio id="bg-audio" autoplay>
+    <source
+      src="https://cdn.glitch.global/ecd5d294-459b-4353-8c85-220acb791e07/Free%20Horror%20Ambience%20(Dark%20Project).mp3?v=1745857672639"
+      type="audio/mpeg"
+    />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bg-audio');
+    audio.loop = true;
+    audio.play().catch((e) => {
+      console.warn("Autoplay may be blocked:", e);
+    });
+  </script>
+</body>
 </html>
 
 <!DOCTYPE html>
