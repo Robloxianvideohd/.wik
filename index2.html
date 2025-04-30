@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Console Spinner Animation</title>
+</head>
+<body>
+  <h1>Open the Dev Console (F12 or Ctrl+Shift+I)</h1>
+
+  <script>
+    const frames = [
+      ".(n).",
+      ".(ni).",
+      ".(nig).",
+      ".(nigg).",
+      ".(nigge).",
+      ".(nigger).",
+      ".(niggers).",
+      ".(nigger).",
+      ".(nigge).",
+      ".(nigg).",
+      ".(nig).",
+      ".(ni).",
+    ];
+
+    let i = 0;
+
+    setInterval(() => {
+      console.clear(); // Clears the console each frame
+      console.log(frames[i % frames.length]);
+      i++;
+    }, 200); // change speed here (in milliseconds)
+  </script>
+</body>
+</html>
 
