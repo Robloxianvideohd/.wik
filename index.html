@@ -111,8 +111,20 @@
 <body>
   <!-- Loading Screen -->
   <div id="loading-screen">
-    <p style="color: white; font-size: 30px;">2025-04-03</p>
-  </div>
+  <p id="date-text" style="color: white; font-size: 30px;"></p>
+</div>
+
+<script>
+  function updateDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    document.getElementById('date-text').textContent = `${year}-${month}-${day}`;
+  }
+
+  updateDate();
+</script>
 
   <!-- Top Marquee -->
   <div class="marquee-container">
@@ -175,7 +187,7 @@ You're not meant to be here You're not meant to be here You're not meant to be h
 
       .container {
         position: absolute;
-        top: 200px; /* adjust this */
+        top: 300px; /* adjust this */
         left: 250px; /* adjust this */
         /* You can use bottom/right instead if you want too */
         text-align: center;
@@ -300,7 +312,7 @@ You're not meant to be here You're not meant to be here You're not meant to be h
 
 .scary-box {
     width: 3000px;
-    height: 550px;
+    height: 580px;
     background-color: #200; /* Inner spooky box color */
     border: 4px solid #511; /* Outer outline */
     box-shadow:
