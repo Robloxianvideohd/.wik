@@ -447,3 +447,52 @@ You're not meant to be here You're not meant to be here You're not meant to be h
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GIF Background</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .background img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding-top: 20%;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <img src="https://img1.picmix.com/output/stamp/normal/1/2/2/6/2606221_b080f.gif" alt="Background GIF" />
+  </div>
+  <div class="content">
+    Your content goes here!
+  </div>
+</body>
+</html>
